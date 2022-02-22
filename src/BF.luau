@@ -233,6 +233,10 @@ local function execute(
 end
 
 local function to_ascii(output: { number }): string
+    if #output == 0 then
+        return ""
+    end
+
     local result = string.char(output[1])
 
     for i = 2, #output do
