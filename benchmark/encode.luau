@@ -1,7 +1,7 @@
-local function encode(string)
+local function encode(str: string): string
     local encoded = ""
 
-    for _, byte in ipairs { string.byte(string, 1, -1) } do
+    for _, byte in ipairs { string.byte(str, 1, -1) } do
         encoded ..= string.char(byte + 3)
     end
 
